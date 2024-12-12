@@ -1,17 +1,12 @@
-import { Box, Card } from 'grommet'
-import React from 'react'
+import { Box, Card } from "grommet";
+import React from "react";
 
 export const ImgShepherdThemed = () => (
-
-	<picture >
-		<source
-			srcSet={new URL('../assets/shepherd_dark_350.png', import.meta.url).href}
-			media='(prefers-color-scheme: dark)'
-		/>
-		<img
-			src={new URL('../assets/shepherd_light_350.png', import.meta.url).href}
-			alt='light mode image'
-		/>
-	</picture>
-
-)
+  <picture>
+    <img
+      src={new URL("../assets/shepherd_logo.svg", import.meta.url).href}
+      alt="shepherd logo"
+      width="45px"
+    />
+  </picture>
+);

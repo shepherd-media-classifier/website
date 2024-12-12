@@ -1,13 +1,156 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: "Ruwudu", 'serif', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: black;
+  margin: 0;
+  background: #F7F7F7;
+
+}
+
+#root {
+  display: flex;
+  overflow: auto;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.full-page {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding: 80px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  min-width: 120px;
+}
+
+.regular-padding {
+  padding: 40px;
+}
+
+.header-padding {
+  padding: 20px 40px;
+}
+
+.primary-background-container {
+  background: #fff;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  height: 100%;
+  background: #FFFAF6;
+}
+
+.button-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 60px;
+  text-transform: uppercase;
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  font-size: 16px;
+  color: #FFFAF6;
+  background: #392F25;
+}
+
+button {
+  all: unset;
+}
+
+.border-container {
+  outline: 1px solid;
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+.accent-content-container {
+  width: 100%;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  max-width: 1000px;
+}
+
+.nodes-content-moderation-container {
+  width: 75%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.shepherd-font {
+  text-transform: uppercase;
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  font-size: 16px;
+
+}
+
+h1 {
+  font-family: "Ruwudu", serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 4%;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Ruwudu", serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 4%;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  font-size: 16px;
 }
