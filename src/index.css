@@ -21,6 +21,18 @@ code {
     monospace;
 }
 
+.arweave-logo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  transition: all 300ms;
+}
+
+.arweave-logo:hover {
+  opacity: 50%;
+}
+
 .full-page {
   display: flex;
   width: 100%;
@@ -36,7 +48,8 @@ code {
   justify-content: center;
   align-items: center;
 
-  min-width: 120px;
+  min-width: 160px;
+
 }
 
 .regular-padding {
@@ -52,12 +65,14 @@ code {
 }
 
 .button-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px;
   height: 100%;
   background: #FFFAF6;
+  overflow: hidden;
 }
 
 .button-container button {
@@ -72,16 +87,27 @@ code {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
-  font-size: 16px;
+  font-size: clamp(0.75rem, 1.25vw, 1rem);
   color: #FFFAF6;
   background: #392F25;
 }
 
-button {
-  all: unset;
+.arweave-bg {
+  position: absolute;
+  opacity: 30%;
 }
 
-.border-container {
+.responsive-width {
+  width: 90%;
+}
+
+.main-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container {
   outline: 1px solid;
   margin-top: 1px;
   margin-left: 1px;
@@ -94,7 +120,6 @@ button {
 .content-container {
   display: flex;
   flex-direction: column;
-  width: fit-content;
   max-width: 1000px;
 }
 
@@ -120,8 +145,47 @@ button {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
-  font-size: 16px;
+  font-size: clamp(0.75rem, 1.25vw, 1rem);
+}
 
+.code-wrapper {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+  transition: opacity 300ms;
+}
+
+.code-wrapper:hover {
+  opacity: 50%
+}
+
+.code-container {
+  display: flex;
+
+  align-items: center;
+  background: #F0FFE8;
+  color: #60A404;
+  font-size: clamp(0.6rem, 1.25vw, 0.8rem);
+  padding: 10px;
+}
+
+.blue {
+  color: blue;
+  transition: opacity 300ms;
+}
+
+.blue:hover {
+  opacity: 50%;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  transition: opacity 300ms;
+}
+
+button:hover {
+  opacity: 50%;
 }
 
 h1 {
@@ -130,7 +194,7 @@ h1 {
   font-style: normal;
   letter-spacing: 4%;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: clamp(0.75rem, 1.5vw, 1.2rem);
   margin: 0;
 }
 
@@ -140,7 +204,7 @@ h2 {
   font-style: normal;
   letter-spacing: 4%;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: clamp(0.75rem, 1.5vw, 1.2rem);
   margin: 0;
 }
 
@@ -152,5 +216,23 @@ p {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
-  font-size: 16px;
+  font-size: clamp(0.75rem, 1.25vw, 1rem);
+}
+
+@media screen and (max-width: 992px) {
+  .body-content {
+    flex-direction: column;
+  }
+
+  .responsive-width {
+    width: 100%;
+  }
+
+  .full-page {
+    padding: 40px;
+  }
+
+  .arweave-logo {
+    width: 80px;
+  }
 }

@@ -6,7 +6,7 @@ export const ImgShepherdThemed = () => (
     <img
       src={new URL("../assets/shepherd_logo.svg", import.meta.url).href}
       alt="shepherd logo"
-      width="45px"
+      width="50px"
     />
   </picture>
 );
