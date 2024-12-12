@@ -101,6 +101,7 @@ function App() {
                     src={new URL("./assets/Copy.svg", import.meta.url).href}
                     alt="copy"
                     width={15}
+                    height={15}
                   />
                 </div>
                 <p>
