@@ -110,7 +110,7 @@ code {
 }
 
 .container {
-  outline: 1px solid gray;
+  outline: 1px solid #262b28;
   margin-top: 1px;
   margin-left: 1px;
 }
@@ -173,12 +173,17 @@ code {
 }
 
 .blue {
-  color: blue;
+  color: rgb(49, 255, 56);
   transition: opacity 300ms;
+  cursor: pointer;
 }
 
 .blue:hover {
   opacity: 50%;
+}
+
+a {
+  all: unset;
 }
 
 button {
