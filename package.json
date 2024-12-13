@@ -8,6 +8,7 @@
     "clean": "rimraf dist/ .parcel-cache/",
     "start": "parcel src/index.html",
     "build": "npm run clean && parcel build --public-url . src/index.html --no-source-maps",
+    "deploy-share": "npm run clean && parcel build --public-url . src/index.html --no-source-maps && arx upload-dir dist -w ./wallet.json --index-file index.html -t arweave -h https://turbo.ardrive.io",
     "test": "mocha"
   },
   "dependencies": {
