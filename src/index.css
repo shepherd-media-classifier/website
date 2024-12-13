@@ -5,9 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  color: #F0FFCF;
   margin: 0;
-  background: #F7F7F7;
+  background: #0a0a0a;
 
 }
 
@@ -61,7 +61,7 @@ code {
 }
 
 .primary-background-container {
-  background: #fff;
+  background: #030707;
 }
 
 .button-container {
@@ -71,7 +71,7 @@ code {
   align-items: center;
   padding: 40px;
   height: 100%;
-  background: #FFFAF6;
+  background: #000000;
   overflow: hidden;
 }
 
@@ -88,13 +88,15 @@ code {
   font-variation-settings:
     "wdth" 100;
   font-size: clamp(0.75rem, 1.25vw, 1rem);
-  color: #FFFAF6;
-  background: #392F25;
+  color: #0AD63A;
+  background: #0A1D09;
+  border: 1px solid #0AD63A;
 }
 
 .arweave-bg {
   position: absolute;
   opacity: 30%;
+  filter: invert(1);
 }
 
 .responsive-width {
@@ -108,7 +110,7 @@ code {
 }
 
 .container {
-  outline: 1px solid;
+  outline: 1px solid gray;
   margin-top: 1px;
   margin-left: 1px;
 }
@@ -164,8 +166,8 @@ code {
   display: flex;
 
   align-items: center;
-  background: #F0FFE8;
-  color: #60A404;
+  background: #183E01;
+  color: #0AD63A;
   font-size: clamp(0.6rem, 1.25vw, 0.8rem);
   padding: 10px;
 }
@@ -235,5 +237,6 @@ p {
 
   .arweave-logo {
     width: 80px;
+
   }
 }

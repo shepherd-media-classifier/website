@@ -4,7 +4,7 @@ import React from "react";
 export const ImgShepherdThemed = () => (
   <picture>
     <img
-      src={new URL("../assets/shepherd_logo.svg", import.meta.url).href}
+      src={new URL("../assets/Shepherd_logo.svg", import.meta.url).href}
       alt="shepherd logo"
       width="50px"
     />
