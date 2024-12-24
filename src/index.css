@@ -1,13 +1,251 @@
+:root {
+  color-scheme: light dark;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: "Ruwudu", 'serif', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: light-dark(black,#F0FFCF);
+  margin: 0;
+  background: light-dark(#F7F7F7, #0a0a0a);
+}
+
+#root {
+  display: flex;
+  overflow: auto;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.arweave-logo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  transition: all 300ms;
+}
+
+.arweave-logo:hover {
+  opacity: 50%;
+}
+
+.full-page {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding: 80px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  min-width: 160px;
+
+}
+
+.regular-padding {
+  padding: 40px;
+}
+
+.header-padding {
+  padding: 20px 40px;
+}
+
+.primary-background-container {
+  background: light-dark(#fff, #030707);
+}
+
+.button-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  height: 100%;
+  background: light-dark(#FFFAF6, #000000);
+  overflow: hidden;
+}
+
+.button-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 60px;
+  text-transform: uppercase;
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  font-size: clamp(0.75rem, 1.25vw, 1rem);
+  color: light-dark(#FFFAF6, #0AD63A);
+  background: light-dark(#392F25, #0A1D09);
+  border: 1px solid #0AD63A;
+}
+
+.arweave-bg {
+  position: absolute;
+  opacity: 30%;
+  @media (prefers-color-scheme: dark){
+    filter: invert(1);
+  }
+}
+
+.responsive-width {
+  width: 90%;
+}
+
+.main-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container {
+  outline: 1px solid #262b28;
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+.accent-content-container {
+  width: 100%;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+}
+
+.nodes-content-moderation-container {
+  width: 75%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.shepherd-font {
+  text-transform: uppercase;
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  font-size: clamp(0.75rem, 1.25vw, 1rem);
+}
+
+.code-wrapper {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+  transition: opacity 300ms;
+  align-items: center;
+}
+
+.code-wrapper:hover {
+  opacity: 50%
+}
+
+.code-container {
+  display: flex;
+
+  align-items: center;
+  background: light-dark(#F0FFE8, #183E01);
+  color: light-dark(#60A404, #0AD63A);
+  font-size: clamp(0.6rem, 1.25vw, 0.8rem);
+  padding: 10px;
+}
+
+.blue {
+  color: light-dark(blue, rgb(49, 255, 56));
+  transition: opacity 300ms;
+  cursor: pointer;
+}
+
+.blue:hover {
+  opacity: 50%;
+}
+
+a {
+  all: unset;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  transition: opacity 300ms;
+}
+
+button:hover {
+  opacity: 50%;
+}
+
+h1 {
+  font-family: "Ruwudu", serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 4%;
+  text-transform: uppercase;
+  font-size: clamp(0.75rem, 1.5vw, 1.2rem);
+  margin: 0;
+}
+
+h2 {
+  font-family: "Ruwudu", serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 4%;
+  text-transform: uppercase;
+  font-size: clamp(0.75rem, 1.5vw, 1.2rem);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  font-size: clamp(0.75rem, 1.25vw, 1rem);
+}
+
+@media screen and (max-width: 992px) {
+  .body-content {
+    flex-direction: column;
+  }
+
+  .responsive-width {
+    width: 100%;
+  }
+
+  .full-page {
+    padding: 40px;
+  }
+
+  .arweave-logo {
+    width: 80px;
+
+  }
 }
