@@ -97,12 +97,18 @@ function App() {
                   <CodeBox>
                     transaction_blacklist_url http://shepherd-v.com/nsfw.txt
                   </CodeBox>
-                  <img
-                    src={new URL("./assets/Copy.svg", import.meta.url).href}
-                    alt="copy"
-                    width={15}
-                    height={15}
-                  />
+                  <picture>
+                    <source
+                      srcSet={new URL('./assets/Copy_light.svg', import.meta.url).href}
+                      media="(prefers-color-scheme: light)"
+                    />
+                    <img
+                      src={new URL("./assets/Copy.svg", import.meta.url).href}
+                      alt="copy"
+                      width={15}
+                      height={15}
+                    />
+                  </picture>
                 </div>
                 <p>
                   It uses a simple plugin architecture so that you are in
