@@ -9,6 +9,7 @@
     "start": "parcel src/index.html",
     "build": "npm run clean && parcel build --public-url . src/index.html --no-source-maps",
     "deploy:local": "npm run build && DEPLOY_KEY=$(base64 -i wallet.json) permaweb-deploy --ant-process 'HQ0wrYT4akdBPIzIJeENqKGjluJYv0js9DknHm8lSxc' --deploy-folder dist",
+    "balance": "npx @ardrive/turbo-sdk balance --address v2XXwq_FvVqH2KR4p_x8H-SQ7rDwZBbykSv-59__Avc",
     "test": "mocha"
   },
   "dependencies": {
