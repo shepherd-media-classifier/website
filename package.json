@@ -8,15 +8,14 @@
     "clean": "rimraf dist/ .parcel-cache/",
     "start": "parcel src/index.html",
     "build": "npm run clean && parcel build --public-url . src/index.html --no-source-maps",
-    "deploy:local": "npm run build && DEPLOY_KEY=$(base64 -i wallet.json) permaweb-deploy --ant-process 'HQ0wrYT4akdBPIzIJeENqKGjluJYv0js9DknHm8lSxc' --deploy-folder dist",
-    "balance": "npx @ardrive/turbo-sdk balance --address v2XXwq_FvVqH2KR4p_x8H-SQ7rDwZBbykSv-59__Avc",
+    "deploy:local": "npm run build && DEPLOY_KEY=$(base64 -i wallet.json) permaweb-deploy --ant-process 'HQ0wrYT4akdBPIzIJeENqKGjluJYv0js9DknHm8lSxc' --deploy-folder dist --undername '@'",
+    "balance": "npx @ardrive/turbo-sdk balance --address 8v3rZ8fIulJP0fFUKdHq1W26h51TeJfK216LrTlh_B0",
     "test": "mocha"
   },
   "dependencies": {
     "arweave": "^1.11.6",
     "grommet": "^2.27.0",
     "grommet-icons": "^4.8.0",
-    "permaweb-deploy": "^1.1.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -28,6 +27,7 @@
     "chai": "latest",
     "mocha": "latest",
     "parcel": "latest",
+    "permaweb-deploy": "^1.1.8",
     "process": "^0.11.10",
     "querystring-es3": "^0.2.1",
     "rimraf": "^6.0.1",
