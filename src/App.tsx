@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { ImgShepherdThemed } from "./components/ImgShepherdThemes";
-import { FooterHot } from "./components/FooterHot";
 import { CodeBox } from "./components/CodeBox";
 import { handleCopyToClipboard } from "./helperFunctions/copyToClipboard";
 

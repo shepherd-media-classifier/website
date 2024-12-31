@@ -1,4 +1,3 @@
-import { Box, Card } from "grommet";
 import React from "react";
 
 export const ImgShepherdThemed = () => (
