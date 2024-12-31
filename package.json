@@ -19,7 +19,6 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@rosmcmahon/permaweb-deploy": "^1.1.9",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.6",
@@ -27,6 +26,7 @@
     "chai": "latest",
     "mocha": "latest",
     "parcel": "latest",
+    "permaweb-deploy": "^1.1.10",
     "process": "^0.11.10",
     "querystring-es3": "^0.2.1",
     "rimraf": "^6.0.1",
