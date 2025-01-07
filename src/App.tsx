@@ -30,7 +30,7 @@ function App() {
       <div className="full-page">
         <header>
           <div className="header-container">
-            <ImgShepherdThemed size={25} />
+            <ImgShepherdThemed size={140} />
             <a href="https://arweave.org">
               <picture>
                 <source
@@ -52,21 +52,9 @@ function App() {
           </div>
         </header>
 
-        <div className="content-container ">
-          <div className="logo-container container primary-background-container ">
-            <span className="shepherd-font">shepherd</span>
-            <a
-              href="https://github.com/shepherd-media-classifier/shepherd/tree/stable-single-machine#readme"
-              style={{ zIndex: "2", cursor: "pointer" }}
-            >
-              <p style={{ fontSize: "clamp(0.6rem, 1.25vw, 0.75rem)" }}>
-                Current Version: shepherd {version}
-              </p>
-            </a>
-          </div>
-
-          <div className="column body-container">
-            <div className="column container primary-background-container main-gap">
+        <div className="content-container">
+          <div className="column side-bar">
+            <div className="column container ">
               <h2>Overview</h2>
               <p>
                 <a
@@ -88,7 +76,7 @@ function App() {
                 through the use of these plugins.
               </p>
             </div>
-            <div className="column container primary-background-container main-gap">
+            <div className="column container ">
               <h2>Getting Started</h2>
               <p>
                 To help you get started, @ArweaveTeam provides an NSFW content
@@ -127,10 +115,104 @@ function App() {
                 through the use of these plugins.
               </p>
             </div>
-            <div className="column container primary-background-container main-gap">
+            <div className="column container ">
               <h2>Your Nodes Your Content Moderation</h2>
 
-              <div className="main-gap">
+              <div className="">
+                <p>
+                  <a
+                    href="https://github.com/shepherd-media-classifier/shepherd/tree/stable-single-machine#readme"
+                    style={{ zIndex: "2", cursor: "pointer" }}
+                  >
+                    <i>shepherd</i>{" "}
+                  </a>{" "}
+                  puts the control over content you want to filter fully in your
+                  hands.
+                </p>
+                <p>
+                  It handles all of the raw content from the weave data, filters
+                  out non-media and most invalid data, and passes it on to your
+                  filter plugin.
+                </p>
+                <p>
+                  What content you decide to filter is up to you and your moral
+                  and legal compliance needs.
+                </p>
+                <p>
+                  Your filter plug-in is fully customizable and allows you to
+                  filter anything you can build an AI classification filter for,
+                  or even use simpler filters such as blacklist/whitelist for a
+                  particular app’s content media.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="column body-container">
+            <div className="column container ">
+              <h2>Overview</h2>
+              <p>
+                <a
+                  href="https://github.com/shepherd-media-classifier/shepherd/tree/stable-single-machine#readme"
+                  style={{ zIndex: "2", cursor: "pointer" }}
+                >
+                  <i>shepherd</i>{" "}
+                </a>
+                is a framework to build content moderation systems.
+              </p>
+              <p>
+                The output of shepherd is a transaction ID list that you can
+                load with an Arweave node, in order to protect your node from
+                storing and serving unwanted material.
+              </p>
+              <p>
+                It uses a simple plugin architecture so that you are in control
+                of what is filtered, and makes creating your own filters easier
+                through the use of these plugins.
+              </p>
+            </div>
+            <div className="column container ">
+              <h2>Getting Started</h2>
+              <p>
+                To help you get started, @ArweaveTeam provides an NSFW content
+                filter which you can load by adding the following to your
+                Arweave start command:
+              </p>
+              <div
+                className="code-wrapper"
+                onClick={() =>
+                  handleCopyToClipboard(
+                    "transaction_blacklist_url http://shepherd-v.com/nsfw.txt"
+                  )
+                }
+              >
+                <CodeBox>
+                  transaction_blacklist_url http://shepherd-v.com/nsfw.txt
+                </CodeBox>
+                <picture>
+                  <source
+                    srcSet={
+                      new URL("./assets/Copy_light.svg", import.meta.url).href
+                    }
+                    media="(prefers-color-scheme: light)"
+                  />
+                  <img
+                    src={new URL("./assets/Copy.svg", import.meta.url).href}
+                    alt="copy"
+                    width={15}
+                    height={15}
+                  />
+                </picture>
+              </div>
+              <p>
+                It uses a simple plugin architecture so that you are in control
+                of what is filtered, and makes creating your own filters easier
+                through the use of these plugins.
+              </p>
+            </div>
+            <div className="column container ">
+              <h2>Your Nodes Your Content Moderation</h2>
+
+              <div className="">
                 <p>
                   <a
                     href="https://github.com/shepherd-media-classifier/shepherd/tree/stable-single-machine#readme"
