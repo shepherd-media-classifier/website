@@ -1,0 +1,26 @@
+button {
+    border: 1px solid var(--MainDark_Light, #16240E);
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex: 1 0 0;
+}
+
+.button-accent {
+    width: 100%;
+    background: var(--MainDark-Light);
+    color: var(--Accent-2-Light);
+}
+
+.button-secondary {
+    padding: 0 20px;
+    width: 20%;
+}
+
+.github-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

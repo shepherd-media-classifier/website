@@ -7,7 +7,7 @@ interface ImgShepherdThemedProps {
 export const ImgShepherdThemed: React.FC<ImgShepherdThemedProps> = ({
   size,
 }) => (
-  <picture>
+  <picture className="shepherd-logo">
     <source
       srcSet={
         new URL("../assets/Shepherd_logo_light.svg", import.meta.url).href
