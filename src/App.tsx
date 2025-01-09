@@ -5,6 +5,7 @@ import { handleCopyToClipboard } from "./helperFunctions/copyToClipboard";
 import Button from "./components/Button/Button";
 import { ImgGlobeArweaveShepherd } from "./components/ImgGlobeArweaveShepherd";
 import InfoBar from "./components/InfoBar/InfoBar";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   const [version, setVersion] = useState("...");
@@ -51,119 +52,73 @@ function App() {
               </a> */}
 
         <div className="body-wrapper">
-          <div className="column side-bar">
-            <div className="top-sidebar">
-              <ImgShepherdThemed size={140} />
-              <div className="code-copy-content">
-                <p>
-                  Get started with a <b>NSFW Filter</b> to add to your Arweave
-                  start command:{" "}
-                </p>
-                <div
-                  className="code-wrapper"
-                  onClick={() =>
-                    handleCopyToClipboard(
-                      "transaction_blacklist_url http://shepherd-v.com/nsfw.txt"
-                    )
-                  }
-                >
-                  <CodeBox>
-                    transaction_blacklist_url http://shepherd-v.com/nsfw.txt
-                  </CodeBox>
-                </div>
-              </div>
-              <div className="button-wrapper">
-                <Button variant="accent">
-                  <picture className="github-logo">
-                    <source
-                      srcSet={
-                        new URL(
-                          "./assets/github-logo_light.svg",
-                          import.meta.url
-                        ).href
-                      }
-                      media="(prefers-color-scheme: light)"
-                    />
-                    <img
-                      src={
-                        new URL("./assets/Shepherd_logo.svg", import.meta.url)
-                          .href
-                      }
-                      alt="github logo"
-                      width={20}
-                    />
-                  </picture>
-                  <p>Github</p>
-                </Button>{" "}
-                <Button>
-                  {" "}
-                  <p>Arweave.org</p>
-                </Button>
-              </div>
-            </div>
-            <div className="bottom-sidebar">
-              <span className="current-version">
-                current version: {version}
-              </span>
-            </div>
-          </div>
-          <div className="main-wrapper">
+          <div className="main-wrapper" dir="ltr">
             <InfoBar />
-            <div className="column main-container">
-              <div className="column content-container ">
-                <h2>Overview</h2>
-                <p>
-                  <a
-                    href="https://github.com/shepherd-media-classifier/shepherd/tree/stable-single-machine#readme"
-                    style={{ zIndex: "2", cursor: "pointer" }}
-                  >
-                    <i>shepherd</i>{" "}
-                  </a>
-                  is a framework to build content moderation systems.
-                </p>
-                <p>
-                  The output of shepherd is a transaction ID list that you can
-                  load with an Arweave node, in order to protect your node from
-                  storing and serving unwanted material.
-                </p>
-                <div className="illustration-container">
-                  <ImgGlobeArweaveShepherd width={"100%"} />
-                </div>
-                <p>
-                  It uses a simple plugin architecture so that you are in
-                  control of what is filtered, and makes creating your own
-                  filters easier through the use of these plugins.
-                </p>
-              </div>
-              <div className="column content-container ">
-                <h2>Getting Started</h2>
-                <p>
-                  To help you get started, @ArweaveTeam provides an NSFW content
-                  filter which you can load by adding the following to your
-                  Arweave start command:
-                </p>
-                <div
-                  className="code-wrapper"
-                  onClick={() =>
-                    handleCopyToClipboard(
-                      "transaction_blacklist_url http://shepherd-v.com/nsfw.txt"
-                    )
-                  }
-                >
-                  <CodeBox>
-                    transaction_blacklist_url http://shepherd-v.com/nsfw.txt
-                  </CodeBox>
-                </div>
-                <p>
-                  It uses a simple plugin architecture so that you are in
-                  control of what is filtered, and makes creating your own
-                  filters easier through the use of these plugins.
-                </p>
-              </div>
-              <div className="column content-container ">
-                <h2>Your Nodes Your Content Moderation</h2>
+            <div className="main-flex">
+              <Sidebar version={version} />
 
-                <div className="">
+              <main className="column main-container">
+                <div className="column content-container">
+                  <h2>
+                    <span>01</span> Overview
+                  </h2>
+
+                  <p>
+                    <a
+                      href="https://github.com/shepherd-media-classifier/shepherd/tree/stable-single-machine#readme"
+                      style={{ zIndex: "2", cursor: "pointer" }}
+                    >
+                      <i>shepherd</i>{" "}
+                    </a>
+                    is a framework to build content moderation systems.
+                  </p>
+                  <p>
+                    The output of shepherd is a transaction ID list that you can
+                    load with an Arweave node, in order to protect your node
+                    from storing and serving unwanted material.
+                  </p>
+                  <div className="illustration-container">
+                    <ImgGlobeArweaveShepherd width={"100%"} />
+                  </div>
+                  <p>
+                    It uses a simple plugin architecture so that you are in
+                    control of what is filtered, and makes creating your own
+                    filters easier through the use of these plugins.
+                  </p>
+                </div>
+                <div className="column content-container">
+                  <h2>
+                    <span>02</span> Getting Started
+                  </h2>
+
+                  <p>
+                    To help you get started, @ArweaveTeam provides an NSFW
+                    content filter which you can load by adding the following to
+                    your Arweave start command:
+                  </p>
+                  <div
+                    className="code-wrapper"
+                    onClick={() =>
+                      handleCopyToClipboard(
+                        "transaction_blacklist_url http://shepherd-v.com/nsfw.txt"
+                      )
+                    }
+                  >
+                    <CodeBox>
+                      transaction_blacklist_url http://shepherd-v.com/nsfw.txt
+                    </CodeBox>
+                  </div>
+                  <p>
+                    It uses a simple plugin architecture so that you are in
+                    control of what is filtered, and makes creating your own
+                    filters easier through the use of these plugins.
+                  </p>
+                </div>
+                <div className="column content-container">
+                  <h2>
+                    <span>03</span> Your Nodes Your Content Moderation
+                  </h2>
+
                   <p>
                     <a
                       href="https://github.com/shepherd-media-classifier/shepherd/tree/stable-single-machine#readme"
@@ -190,7 +145,7 @@ function App() {
                     for a particular app’s content media.
                   </p>
                 </div>
-              </div>
+              </main>
             </div>
           </div>
         </div>
