@@ -1,0 +1,20 @@
+.info-bar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    padding: 10 30;
+    background: var(--MainDark-Light);
+    color: var(--Accent-2-Light);
+    justify-content: space-between;
+    align-items: center;
+    height: var(--info-bar-height)
+}
+
+@media screen and (max-width: 900px) {
+    .secondary-info-content {
+        display: none;
+    }
+
+
+}
