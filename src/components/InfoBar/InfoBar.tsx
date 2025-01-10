@@ -15,16 +15,18 @@ const InfoBar = () => {
           />
           <img
             src={
-              new URL("../../assets/arweave-logo_dark.svg", import.meta.url)
+              new URL("../../assets/arweave-logo_light.svg", import.meta.url)
                 .href
             }
             alt="arweave logo"
             width={18}
           />
         </picture>
-        <p>
-          <b>Generate your own content moderation policies.</b> For the content
-          you would like to store on your Arweave node.
+        <p className="info-content">
+          <b>Generate your own content moderation policies.</b>{" "}
+          <span className="secondary-info-content">
+            For the content you would like to store on your Arweave node.
+          </span>
         </p>
       </div>
       <div>

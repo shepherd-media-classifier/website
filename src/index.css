@@ -28,8 +28,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: light-dark(var(--MainDark-Light), var(--Secondary-2-Light));
-
+  color: var(--MainDark-Light);
 }
 
 .side-bar-wrapper {
@@ -99,7 +98,7 @@ code {
 .full-page {
   display: flex;
   width: 100%;
-  background: light-dark (var(--Secondary-2-Light), var(--MainDark-Light));
+  background: var(--Secondary-2-Light)
 }
 
 .logo-container {
@@ -117,15 +116,6 @@ code {
   text-transform: uppercase;
   font-size: clamp(0.6rem, 1.25vw, 0.8rem);
 
-}
-
-.arweave-bg {
-  position: absolute;
-  opacity: 30%;
-
-  @media (prefers-color-scheme: dark) {
-    filter: invert(1);
-  }
 }
 
 .accent-content-container {
@@ -148,10 +138,6 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  @media (prefers-color-scheme: dark) {
-    border-color: var(--Secondary-1-Dark)
-  }
 }
 
 .main-flex {
@@ -179,10 +165,6 @@ code {
 
 .main-container>*:not(:last-child) {
   border-bottom: 1px solid var(--Secondary-3-Light);
-
-  @media (prefers-color-scheme: dark) {
-    border-color: var(--Secondary-1-Dark)
-  }
 }
 
 .nodes-content-moderation-container {
@@ -216,6 +198,7 @@ code {
   cursor: pointer;
   transition: opacity 300ms;
   align-items: center;
+  width: 100%;
 }
 
 .code-wrapper:hover {
@@ -232,8 +215,8 @@ code {
   display: flex;
   width: 100%;
   align-items: center;
-  background: light-dark(#fff, var(--Secondary-2-Dark));
-  color: light-dark(var(--MainDark-Light), var(--Accent-1-Dark));
+  background: #fff;
+  color: var(--MainDark-Light);
   font-size: clamp(0.6rem, 1.25vw, 0.8rem);
   border-radius: var(--main-border-radius);
   text-overflow: ellipsis;
@@ -245,7 +228,7 @@ code {
 }
 
 .code-container .icon-wrapper {
-  background: light-dark (var(--Secondary-3-Light), var(--Secondary-1-Dark));
+  background: var(--Secondary-3-Light);
 }
 
 .code-container code {
@@ -268,23 +251,13 @@ code {
   align-items: center;
 }
 
-.blue {
-  color: light-dark(blue, rgb(49, 255, 56));
-  transition: opacity 300ms;
-  cursor: pointer;
-}
-
-.blue:hover {
-  opacity: 50%;
-}
-
 a {
   all: unset;
   transition: all 300ms;
 }
 
 a:hover {
-  color: light-dark(var(--Accent-1-Light), var(--Accent-1-Dark));
+  color: var(--Accent-1-Light);
 }
 
 button {
@@ -322,7 +295,7 @@ h2 span {
   letter-spacing: 4%;
   font-size: clamp(0.75rem, 2.0vw, 1.15rem);
   margin-right: 10px;
-  color: light-dark(var(--Accent-1-Light), var(--Accent-1-Dark))
+  color: var(--Accent-1-Light);
 }
 
 p {
@@ -342,11 +315,51 @@ picture {
   width: fit-content;
   height: fit-content;
   align-items: center;
+  justify-content: center;
 }
 
-@media screen and (max-width: 992px) {
-  .arweave-logo {
-    width: 80px;
+@media screen and (max-width: 970px) {
+  .main-flex {
+    flex-direction: column;
+  }
 
+  .globe-shepherd-illustration {
+    width: 80%;
+  }
+
+  .shepherd-logo {
+    width: 100px;
+  }
+
+  .side-bar-wrapper {
+    position: static;
+    width: 100%;
+  }
+
+  #root {
+    --main-padding: 30px;
+    --info-bar-height: 30px;
+
+  }
+
+  .code-container code {
+    white-space: normal;
+  }
+
+  .button-wrapper {
+    width: 50%;
+  }
+
+
+
+}
+
+@media screen and (max-width: 680px) {
+  .globe-shepherd-illustration {
+    width: 60%;
+  }
+
+  .button-wrapper {
+    width: 100%;
   }
 }

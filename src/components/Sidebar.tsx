@@ -48,8 +48,10 @@ const Sidebar: React.FC<SidebarProps> = ({ version }) => {
                   />
                   <img
                     src={
-                      new URL("../assets/github-logo_dark.svg", import.meta.url)
-                        .href
+                      new URL(
+                        "../assets/github-logo_light.svg",
+                        import.meta.url
+                      ).href
                     }
                     alt="github logo"
                     width={20}

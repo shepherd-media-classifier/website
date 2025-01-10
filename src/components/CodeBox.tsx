@@ -14,7 +14,7 @@ export const CodeBox: React.FC<CodeBoxProps> = ({ children }) => (
           media="(prefers-color-scheme: light)"
         />
         <img
-          src={new URL("../assets/Copy.svg", import.meta.url).href}
+          src={new URL("../assets/Copy_light.svg", import.meta.url).href}
           alt="copy"
           width={15}
           height={15}

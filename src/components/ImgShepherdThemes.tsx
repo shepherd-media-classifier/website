@@ -15,7 +15,7 @@ export const ImgShepherdThemed: React.FC<ImgShepherdThemedProps> = ({
       media="(prefers-color-scheme: light)"
     />
     <img
-      src={new URL("../assets/Shepherd_logo_dark.svg", import.meta.url).href}
+      src={new URL("../assets/Shepherd_logo_light.svg", import.meta.url).href}
       alt="shepherd logo"
       width={size}
     />

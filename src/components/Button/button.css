@@ -1,5 +1,5 @@
 button {
-    border: 1px solid var(--MainDark_Light, transparent);
+    border: 1px solid var(--MainDark-Light);
     display: flex;
     height: 40px;
     justify-content: center;
@@ -10,21 +10,23 @@ button {
 
 .button-accent {
     width: 100%;
-    background: light-dark(var(--MainDark-Light), var(--Secondary-2-Dark));
-    color: light-dark(var(--Accent-2-Light), var(--Accent-1-Dark));
+    background: var(--MainDark-Light);
+    color: var(--Accent-2-Light);
 }
 
 .button-secondary {
     margin-left: 20px;
     white-space: nowrap;
-
-    @media (prefers-color-scheme: dark) {
-        color: var(--Accent--Dark)
-    }
 }
 
 .github-logo {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 970px) {
+    button {
+        height: 25px;
+    }
 }

@@ -7,7 +7,7 @@ interface ImgGlobeArweaveShepherdProps {
 export const ImgGlobeArweaveShepherd: React.FC<
   ImgGlobeArweaveShepherdProps
 > = ({ width }) => (
-  <picture className="shepherd-logo">
+  <picture>
     <source
       srcSet={
         new URL(
@@ -20,10 +20,11 @@ export const ImgGlobeArweaveShepherd: React.FC<
     <img
       src={
         new URL(
-          "../assets/arweave-shepherd-globe-illustration_dark.svg",
+          "../assets/arweave-shepherd-globe-illustration_light.svg",
           import.meta.url
         ).href
       }
+      className="globe-shepherd-illustration"
       alt="shepherd logo"
       width={width}
     />

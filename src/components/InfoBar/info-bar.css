@@ -4,9 +4,17 @@
     display: flex;
     width: 100%;
     padding: 10 30;
-    background: light-dark(var(--MainDark-Light), #1a1a1a);
-    color: light-dark(var(--Accent-2-Light), var(--Secondary-3-Light));
+    background: var(--MainDark-Light);
+    color: var(--Accent-2-Light);
     justify-content: space-between;
     align-items: center;
     height: var(--info-bar-height)
+}
+
+@media screen and (max-width: 900px) {
+    .secondary-info-content {
+        display: none;
+    }
+
+
 }

@@ -32,25 +32,6 @@ function App() {
   return (
     <>
       <div className="full-page">
-        {/* <a href="https://arweave.org">
-              <picture>
-                <source
-                  srcSet={
-                    new URL("./assets/arweave_logo_light.svg", import.meta.url)
-                      .href
-                  }
-                  media="(prefers-color-scheme: light)"
-                />
-                <img
-                  src={
-                    new URL("./assets/arweave_logo.svg", import.meta.url).href
-                  }
-                  alt="arweave"
-                  width={100}
-                />
-              </picture>
-              </a> */}
-
         <div className="body-wrapper">
           <div className="main-wrapper" dir="ltr">
             <InfoBar />
