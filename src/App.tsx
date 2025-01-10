@@ -56,7 +56,6 @@ function App() {
             <InfoBar />
             <div className="main-flex">
               <Sidebar version={version} />
-
               <main className="column main-container">
                 <div className="column content-container">
                   <h2>

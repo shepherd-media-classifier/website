@@ -54,6 +54,11 @@ body {
   gap: 8px;
 }
 
+.button-wrapper a {
+  display: flex;
+  width: 100%;
+}
+
 .top-sidebar {
   display: flex;
   flex-direction: column;
@@ -330,9 +335,6 @@ picture {
 }
 
 @media screen and (max-width: 992px) {
-
-
-
   .arweave-logo {
     width: 80px;
 

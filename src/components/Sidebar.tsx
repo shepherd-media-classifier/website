@@ -33,29 +33,37 @@ const Sidebar: React.FC<SidebarProps> = ({ version }) => {
             </div>
           </div>
           <div className="button-wrapper">
-            <Button variant="accent">
-              <picture className="github-logo">
-                <source
-                  srcSet={
-                    new URL("../assets/github-logo_light.svg", import.meta.url)
-                      .href
-                  }
-                  media="(prefers-color-scheme: light)"
-                />
-                <img
-                  src={
-                    new URL("../assets/Shepherd_logo.svg", import.meta.url).href
-                  }
-                  alt="github logo"
-                  width={20}
-                />
-              </picture>
-              <p>Github</p>
-            </Button>{" "}
-            <Button>
+            <a href="https://github.com/shepherd-media-classifier/shepherd/tree/stable-single-machine#readme">
               {" "}
-              <p>Arweave.org</p>
-            </Button>
+              <Button variant="accent">
+                <picture className="github-logo">
+                  <source
+                    srcSet={
+                      new URL(
+                        "../assets/github-logo_light.svg",
+                        import.meta.url
+                      ).href
+                    }
+                    media="(prefers-color-scheme: light)"
+                  />
+                  <img
+                    src={
+                      new URL("../assets/Shepherd_logo.svg", import.meta.url)
+                        .href
+                    }
+                    alt="github logo"
+                    width={20}
+                  />
+                </picture>
+                <p>Github</p>
+              </Button>{" "}
+            </a>
+            <a href="https://arweave.org">
+              <Button>
+                {" "}
+                <p>Arweave.org</p>
+              </Button>
+            </a>
           </div>
           <div className="bottom-sidebar">
             <span className="current-version">current version: {version}</span>

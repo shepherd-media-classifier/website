@@ -28,10 +28,12 @@ const InfoBar = () => {
         </p>
       </div>
       <div>
-        <Button variant="secondary">
-          {" "}
-          <p>↳ Visit Github</p>
-        </Button>
+        <a href="https://github.com/shepherd-media-classifier/shepherd/tree/stable-single-machine#readme">
+          <Button variant="secondary">
+            {" "}
+            <p>↳ Visit Github</p>
+          </Button>
+        </a>
       </div>
     </div>
   );
