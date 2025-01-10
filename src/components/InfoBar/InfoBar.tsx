@@ -15,7 +15,7 @@ const InfoBar = () => {
           />
           <img
             src={
-              new URL("../../assets/arweave-logo_light.svg", import.meta.url)
+              new URL("../../assets/arweave-logo_dark.svg", import.meta.url)
                 .href
             }
             alt="arweave logo"

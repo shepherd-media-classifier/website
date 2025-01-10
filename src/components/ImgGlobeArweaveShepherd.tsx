@@ -18,7 +18,12 @@ export const ImgGlobeArweaveShepherd: React.FC<
       media="(prefers-color-scheme: light)"
     />
     <img
-      src={new URL("../assets/Shepherd_logo.svg", import.meta.url).href}
+      src={
+        new URL(
+          "../assets/arweave-shepherd-globe-illustration_dark.svg",
+          import.meta.url
+        ).href
+      }
       alt="shepherd logo"
       width={width}
     />

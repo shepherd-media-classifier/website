@@ -2,7 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link
+      id="favicon"
+      rel="icon"
+      type="image/svg+xml"
+      href="./favicon_light.svg"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,6 +19,25 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      function updateFavicon() {
+        const favicon = document.getElementById("favicon");
+        const darkModeMediaQuery = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        );
+        if (darkModeMediaQuery.matches) {
+          favicon.href = "./favicon.svg";
+        } else {
+          favicon.href = "./favicon_light.svg";
+        }
+      }
+
+      updateFavicon();
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", updateFavicon);
+    </script>
     <script type="module" src="./main.tsx"></script>
   </body>
 </html>

@@ -48,7 +48,7 @@ const Sidebar: React.FC<SidebarProps> = ({ version }) => {
                   />
                   <img
                     src={
-                      new URL("../assets/Shepherd_logo.svg", import.meta.url)
+                      new URL("../assets/github-logo_dark.svg", import.meta.url)
                         .href
                     }
                     alt="github logo"

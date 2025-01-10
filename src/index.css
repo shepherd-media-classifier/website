@@ -9,7 +9,10 @@
   --Secondary-1-Light: rgba(246, 246, 246, 1);
   --Secondary-2-Light: rgba(251, 251, 251, 1);
   --Secondary-3-Light: rgba(223, 223, 223, 1);
+  --Secondary-1-Dark: rgb(39, 39, 39);
+  --Secondary-2-Dark: #001702;
   --Accent-1-Light: rgba(96, 164, 4, 1);
+  --Accent-1-Dark: #0AD63A;
   --Accent-2-Light: rgba(240, 255, 232, 1);
   --main-padding: 60px;
   --main-gap: 30px;
@@ -25,7 +28,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: light-dark(var(--MainDark-Light), #F0FFCF);
+  color: light-dark(var(--MainDark-Light), var(--Secondary-2-Light));
 
 }
 
@@ -96,7 +99,7 @@ code {
 .full-page {
   display: flex;
   width: 100%;
-  background: var(--Secondary-2-Light);
+  background: light-dark (var(--Secondary-2-Light), var(--MainDark-Light));
 }
 
 .logo-container {
@@ -145,6 +148,10 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (prefers-color-scheme: dark) {
+    border-color: var(--Secondary-1-Dark)
+  }
 }
 
 .main-flex {
@@ -171,7 +178,11 @@ code {
 }
 
 .main-container>*:not(:last-child) {
-  border-bottom: 1px solid var(--Secondary-3-Light)
+  border-bottom: 1px solid var(--Secondary-3-Light);
+
+  @media (prefers-color-scheme: dark) {
+    border-color: var(--Secondary-1-Dark)
+  }
 }
 
 .nodes-content-moderation-container {
@@ -208,7 +219,7 @@ code {
 }
 
 .code-wrapper:hover {
-  opacity: 50%
+  opacity: 80%
 }
 
 .code-copy-content {
@@ -221,8 +232,8 @@ code {
   display: flex;
   width: 100%;
   align-items: center;
-  background: light-dark(#fff, #183E01);
-  color: light-dark(var(--MainDark-Light), #0AD63A);
+  background: light-dark(#fff, var(--Secondary-2-Dark));
+  color: light-dark(var(--MainDark-Light), var(--Accent-1-Dark));
   font-size: clamp(0.6rem, 1.25vw, 0.8rem);
   border-radius: var(--main-border-radius);
   text-overflow: ellipsis;
@@ -234,7 +245,7 @@ code {
 }
 
 .code-container .icon-wrapper {
-  background: var(--Secondary-3-Light);
+  background: light-dark (var(--Secondary-3-Light), var(--Secondary-1-Dark));
 }
 
 .code-container code {
@@ -273,8 +284,7 @@ a {
 }
 
 a:hover {
-  opacity: 50%;
-  color: #60A404;
+  color: light-dark(var(--Accent-1-Light), var(--Accent-1-Dark));
 }
 
 button {
@@ -284,7 +294,7 @@ button {
 }
 
 button:hover {
-  opacity: 50%;
+  opacity: 80%;
 }
 
 h1 {
@@ -312,7 +322,7 @@ h2 span {
   letter-spacing: 4%;
   font-size: clamp(0.75rem, 2.0vw, 1.15rem);
   margin-right: 10px;
-  color: var(--Accent-1-Light)
+  color: light-dark(var(--Accent-1-Light), var(--Accent-1-Dark))
 }
 
 p {
