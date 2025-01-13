@@ -1,0 +1,32 @@
+button {
+    border: 1px solid var(--MainDark-Light);
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex: 1 0 0;
+}
+
+.button-accent {
+    width: 100%;
+    background: var(--MainDark-Light);
+    color: var(--Accent-2-Light);
+}
+
+.button-secondary {
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.github-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 970px) {
+    button {
+        height: 25px;
+    }
+}
