@@ -11,6 +11,7 @@
     "deploy": "permaweb-deploy --ant-process 'HQ0wrYT4akdBPIzIJeENqKGjluJYv0js9DknHm8lSxc'",
     "deploy:local": "npm run build && DEPLOY_KEY=$(base64 -i wallet.json) permaweb-deploy --ant-process 'HQ0wrYT4akdBPIzIJeENqKGjluJYv0js9DknHm8lSxc' --deploy-folder dist --undername '@'",
     "balance": "npx @ardrive/turbo-sdk balance --address 8v3rZ8fIulJP0fFUKdHq1W26h51TeJfK216LrTlh_B0",
+    "balance:alt": "curl -s https://payment.ardrive.io/v1/balance?address=8v3rZ8fIulJP0fFUKdHq1W26h51TeJfK216LrTlh_B0  | jq '.balance | tonumber / 1e12'",
     "test": "mocha"
   },
   "dependencies": {
