@@ -80,12 +80,12 @@ function App() {
                     className="code-wrapper"
                     onClick={() =>
                       handleCopyToClipboard(
-                        "transaction_blacklist_url https://shepherd.arweave.net/nsfw.txt"
+                        "transaction_blacklist_url https://public_shepherd.arweave.net"
                       )
                     }
                   >
                     <CodeBox>
-                      transaction_blacklist_url https://shepherd.arweave.net/nsfw.txt
+                      transaction_blacklist_url https://public_shepherd.arweave.net
                     </CodeBox>
                   </div>
                   <p>
